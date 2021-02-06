@@ -1,0 +1,35 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{전기적 규격 요약}\label{table:elec-spec}
+   \begin{center}
+   \begin{tabular}{|l l|} \hline
+	\multicolumn{2}{|c|}{전원 분배 (Power Distribution)} \\ \hline
+	전원의 종류 및 최대 허용 용량 & +5V (30 A/slot), +5V STB (1 A/slot) \\
+	콘넥터 핀 당 최대 허용 전류 & 2 A \\ \hline
+	\multicolumn{2}{|c|}{BTL 신호의 전기적 특성 (Characteristics of BTL Electrical Signal)} \\ \hline
+	최고 전압치 (Steady-state High Level) & 1.9 V 이상  2.1 V 이하 \\
+	최저 전압치 (Steady-state Low Level) & 1.1 V 이하 0.0 V 이상 \\ \hline
+	\multicolumn{2}{|c|}{BTL 버스 드라이버의 특성 (Characteristics of BTL Bus Driver)} \\ \hline
+	기술 (Technology) & BTL (Backplane Transceiver Logic) \\
+	전류구동능력 (current driving capability) & 80 $m$A @ $V_{OL}$ \\ \hline
+	\multicolumn{2}{|c|}{TTL 신호의 전기적 특성 (Characteristics of TTL Electrical Signal)} \\ \hline
+	최고 전압치 (Steady-state High Level) & 2.5 V 이상 \\
+	최저 전압치 (Steady-state Low Level) & 0.6 V 이하 \\ \hline
+	\multicolumn{2}{|c|}{TTL 버스 드라이버의 특성 (Characteristics of TTL Bus Driver)} \\ \hline
+	기술 (Technology) & Advanced Schottky TTL \\
+	전류구동능력 (current driving capability) & 64 $m$A @ $V_{OL}$ \\ \hline
+	\multicolumn{2}{|c|}{백플레인의 특성 (Characteristics of Backplane)} \\ \hline
+	특성 임피던스 (버스클럭/일반신호선) & 50/80 $\Omega$ (홀이 없는 상태) \\
+	핀/슬롯 당 최대 허용 용량성 부하 (BTL 신호선)& 15 $p$F \\
+	핀/슬롯 당 최대 허용 용량성 부하 (TTL 신호선)& 25 $p$F \\ \hline
+	\multicolumn{2}{|c|}{버스 터미네이터의 특성 (Characteristics of Bus Terminator)} \\ \hline
+	구성 소자 & Resister, Capacitor \\
+	설치 위치 & 백프레인의 양끝 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}
+%%%%

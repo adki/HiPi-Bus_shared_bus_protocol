@@ -1,0 +1,35 @@
+%
+\begin{table}[htbp]
+\caption{데이터 전송 버스의 규격 요약}\label{table:dtb-spec}
+   \begin{center}
+\begingroup
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+\renewcommand{\arraystretch}{0.9} % Default value: 1
+   \begin{tabular}{|l l|} \hline
+      \multicolumn{2}{|c|}{데이터 전송 프로토콜 (Data Transfer Protocols)} \\ \hline
+      Protocol & Pended \\
+      제어 방식 & 동기형 (Synchronous) \\
+      클럭의 속도 & 16.5 MHz (60.6 {\it n\/}sec) \\
+      데이터 전송 속도(Data Bandwidth) & 264 Mbytes/sec\\ \hline
+      \multicolumn{2}{|c|}{어드레스 버스의 특성 (Characteristics of Address Bus)} \\ \hline
+      최대 어드레스 영역의 크기 & 4 Gbytes \\
+      어드레스 영역의 갯수 & 8 \\
+      최대 사용 가능한 전송 형태 & 32 \\ \hline
+      \multicolumn{2}{|c|}{데이터 버스의 특성 (Characteristics of Data Bus)} \\ \hline
+      버스의 폭 (Bus Width) & 128 bits (16 bytes) \\
+      데이터의 단위 (Data Unit) & 8 bits (1 byte) \\
+      전송 가능한 데이터의 크기 & 16-바이트 이내의 연속된 바이트; 64-바이트 \\
+      정렬의 제약 (Alignment Restriction) & 16 byte boundary; 64 byte boundary \\
+      Justification & Straight (Nonjustified) \\ \hline
+      \multicolumn{2}{|c|}{에러 방어 (Error Protection)} \\ \hline
+      에러 검출 (Error Detection) & 바이트 단위의 홀수 패리티 (odd parity) \\
+      에러의 처리 (Error Handling) & 재시도 (Retry) \\ \hline
+      \multicolumn{2}{|c|}{기 타 (Etc.)} \\ \hline
+      캐쉬 지원 & Write Back \\
+      동기화 지원 (Synchronization) & Semaphore Cache Protocol \\
+      총 신호수 & 244\\ \hline
+   \end{tabular}
+\endgroup
+   \end{center}
+\end{table}
+%

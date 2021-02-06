@@ -1,0 +1,22 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{인터럽트 중재 주기에 사용되는 구별자 배정}\label{table:int-ga}
+   \begin{center}
+   \begin{tabular}{|c|l|l|}
+\hline
+Slot ID & \multicolumn{2}{|c|}{Interrupt Requester Identification Address} \\ \cline{2-3}
+	        & ida$<$5..2$>$ & ida$<$1..0$>$ \\
+\hline \hline
+	 0 - 9  & GA$<$3..0$>$ & {\it reserved\/} \\ \hline
+	10      & GA$<$3..0$>$ & {\it reserved\/} \\
+	        & 0x15                 & {\it reserved\/} \\ \hline
+	11 - 12 & GA$<$3..0$>$ & {\it reserved\/} \\ \hline
+	13 - 20 & \multicolumn{2}{|c|}{{\it undefined\/}} \\
+\hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

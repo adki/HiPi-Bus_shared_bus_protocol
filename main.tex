@@ -1,0 +1,137 @@
+%%%%%
+%%Title: HiPi+Bus V1.1 Chapter 0
+%%Creator: Ando Ki
+%%CreationDate:
+%%FileName: ch0
+%%RelatedFile:
+%%%%%
+\documentclass[12pt]{book}
+\usepackage{kotex} %\usepackage{hangul}
+\usepackage{a4wide} %\usepackage[a4paper]{geometry}
+%\usepackage{psfig}
+\usepackage{fancyhdr} %\usepackage{fancyheader}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{draftwatermark}
+\usepackage{pdfpages}
+\usepackage[pdftex,breaklinks]{hyperref}
+%%%
+\pagestyle{fancy}
+%\setlength{\headrulewidth}{0pt}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{\includegraphics{ch0/FIG/smalletri.png} ETRI}
+%\lfoot{무단복제금지 \includegraphics{ch0/FIG/smalletri.png} ETRI Proprietary}
+%\lfoot{무단복제금지 ETRI Proprietary}
+\cfoot{}
+\rfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+%\hypersetup{linktocpage}
+%
+%\nofiles
+%
+\def\HB{HiPi+Bus}	% define system bus name
+%%%
+%%%%
+%\draftcopySetGrey{0.8}
+%\draftcopyName{Samsung Electronics}{50}
+%\draftcopyName{LG Electronics Inc.}{50}
+%\draftcopyName{School of Electrical Eng. / Korea University}{50}
+%\draftcopyName{ETRI-CSTL}{50}
+%\draftcopyName{UNIQUE / ETRI-CSTL}{50}
+\SetWatermarkText{ETRI-CSTL}
+\SetWatermarkScale{3}
+%%%%
+\begin{document}
+%%%%%
+\begin{titlepage}
+\begin{center}{\LARGE\bf 시 스 템 버 스 블 록 설 계 서}\end{center}
+\vspace{10mm}
+\begin{center}{\Large\bf System Bus Block Specifications}\end{center}
+\vspace{15mm}
+\begin{center}{\Large\bf Ver.2.0}\end{center}
+\vspace{15mm}
+\begin{center}{\Large\bf 1994년 1월 20일}\end{center}
+\vspace{15mm}
+\begin{center}{\Large\bf 기 안 도}\end{center}
+\vspace{15mm}
+\begin{center}{\Large\bf 프 로 세 서 연 구 실}\end{center}
+\begin{center}{\Large\bf 시 스 템 연 구 부}\end{center}
+\begin{center}{\Large\bf 한 국 전 자 통 신 연 구 소}\end{center}
+\begin{table}[b]
+   \begin{center}
+     \begin{tabular}{|l|} \hline
+	\multicolumn{1}{|c|}{Copyright \copyright 1991$\bullet$1992$\bullet$1993$\bullet$1994 ETRI} \\
+	이 보고서의 내용을 임의로 전재 또는 복사할 수 없으며, 이 보고서의 내용을 \\
+	이용 또는 전재할 경우 반드시 한국전자통신연구소의 서면 허락을 먼저 취득 \\
+	하여야 한다. \\ \hline
+     \end{tabular}
+   \end{center}
+\end{table}
+\thispagestyle{empty}
+\end{titlepage}
+%
+%%%%%
+\includepdf{td/td.pdf}
+%%%%%
+\clearpage
+\pagenumbering{roman}
+\tableofcontents
+\addcontentsline{toc}{chapter}{목차}
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{그림목차}
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{표목차}
+%
+\newpage
+\chapter*{변경이력}
+\addcontentsline{toc}{chapter}{변경이력}
+%
+\begin{enumerate}
+  \item 1993년 2월 12일 : Ver.1.0 작성완료
+  \item 1993년 2월 22일 : BLK103-21-1.0 문서등록
+  \item 1993년 8월 16일 : Ver.1.1 작성완료
+	\begin{itemize}
+	  \item 오자교정
+	  \item BCLK$<$9..0$>$*를 BCLK*로 변경
+	  \item DI$<$7..0$>$*의 의미를 확장함 (표3.10 참고)
+	  \item WRB 전송형태의 의미를 확장함 (제3.2.1장 Transfer Type 설명 참고)
+	  \item 제7장 전기적 규격에 TTL 관련 규격을 추가함
+	  \item 제8장 기계적 규격의 내용을 변경함
+	  \item 부록을 추가함
+	\end{itemize}
+  \item 1993년 8월 23일 : BLK103-21-1.1 문서등록
+  \item 1993년 12월 16일 : Ver.2.0 작성완료
+	\begin{itemize}
+	  \item 오자교정
+	  \item 제3장 데이터전송버스의 내용중 BE$<$15..0$>$* 부분 변경
+	  \item 제8장 기계적 규격의 내용중 백플레인 크기와 주보드 크기를 정정함
+	\end{itemize}
+\end{enumerate}
+%%
+\clearpage
+\pagenumbering{arabic}
+\input{ch1/TEXT/ch1}
+\input{ch2/TEXT/ch2}
+\input{ch3/TEXT/ch3}
+\input{ch4/TEXT/ch4}
+\input{ch5/TEXT/ch5}
+\input{ch6/TEXT/ch6}
+\input{ch7/TEXT/ch7}
+\input{ch8/TEXT/ch8}
+\appendix
+\input{appendix/TEXT/apA}
+\clearpage
+\input{appendix/TEXT/apB}
+%%%%%
+\end{document}
+%%%%%

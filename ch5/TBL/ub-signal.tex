@@ -1,0 +1,19 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{유틸리티 버스의 신호들}\label{table:ub-signal}
+   \begin{center}
+   \begin{tabular}{|l|r|l|} \hline
+	Mnemonic & Size & Name \\
+\hline \hline
+	BCLK*		& 1 & Bus Clock \\
+	GA$<$4..0$>$*   & 5 & Geographical Slot Address \\
+	SFAIL*          & 1 & System Fail \\
+	RST*            & 1 & Reset \\
+	Tx$<$4..0$>$	& 5 & JTAG Boundary Scan Option \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

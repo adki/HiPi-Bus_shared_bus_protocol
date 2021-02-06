@@ -1,0 +1,54 @@
+%
+\begin{table}[htbp]
+\caption{\HB의 규격}\label{table:bus-spec}
+  \begin{center}
+\begingroup
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+\renewcommand{\arraystretch}{0.9} % Default value: 1
+  \begin{tabular}{|l l|} \hline
+   \multicolumn{2}{|c|}{중재 특성 (Characteristics of Arbitration)} \\ \hline
+      중재 규칙 & 우선순위와 공정성 (Priority and Fairness) \\
+      중재 수행 시간 & 1 Bus Clock (60.6 {\it n\/}sec) \\
+      중재 기법 & 선형자가중재 (Linear Self Arbitration) \\
+      중재기의 특성 & 분산형 중재기 (Distributed Arbiter) \\
+      기타 & Request Inhibition, Request Timeout 구현 \\ \hline
+   \multicolumn{2}{|c|}{데이터 전송 특성 (Characteristics of Data Transfer)} \\ \hline
+      프로토콜 & 펜디드 (Pended) \\
+      제어 방식 & 동기형 (Synchronous) \\
+      클럭 속도 & 16.5 MHz (60.6 {\it n\/}sec) \\
+      어드레스/데이터 & non-multiplexed \\
+      최대 어드레스 영역의 크기 & 4 Gbytes (32 bits wide) \\
+      어드레스 영역의 갯수 & 8 (3개 정의) \\
+      최대 사용 가능한 전송 형태 & 32 (13개 정의) \\
+      버스의 폭 (Bus Width) & 128 bits (16 bytes) \\
+      데이터의 단위 (Data Unit) & 8 bits (1 byte) \\
+      전송 가능한 데이터의 크기 & 16-바이트 이내의 연속된 바이트; 64-바이트 \\
+      정렬의 제약 (Alignment Restriction) & 16 byte boundary; 64 byte boundary \\
+      Justification & Straight (Nonjustified) \\
+      데이터 전송 속도(Data Transfer Rate) & 264 Mbytes/sec ($16Bytes \times 16.5M\!H\!z$)\\ \hline
+   \multicolumn{2}{|c|}{인터럽트 전송 특성 (Characteristics for Interrupt Transfer)} \\ \hline
+      전송 프로토콜 & Message passing protocols \\
+      제어 방식 & 동기형 (Synchronous) \\
+      클럭 속도 & 16.5 MHz (60.6 {\it n\/}sec) \\
+      전송 속도 & 최대 약 1.6 MI/sec (Mega Interrupts per second) \\
+      중재 기법 & 부호화된 자가중재 (Coded Self Arbitration) \\
+      중재기 특성 & 분산형 중재기 (Distributed Arbiter) \\
+      에러 방어 & Parity Detection \\
+      기타 & Broadcast and Arbitration \\ \hline
+    \multicolumn{2}{|c|}{기 타 (Etc.)} \\ \hline
+      캐쉬 지원 & Write Back Cache Coherency Protocol \\
+      동기화 지원 (Synchronization) & Semaphore Cache Protocol \\
+      에러 검출 (Error Detection) & 바이트 단위의 홀수 패리티(odd parity) \\
+      에러 처리 (Error Handling) & 재시도 (Retry) \\
+      경계주사 (Boundary Scan) & IEEE std.1149.1 \\
+      구현 기술 (Technology) & BTL (IEEE std.1194.1) \\
+      슬롯 수 & 21 slots/backplane \\
+      콘넥터 규격 & 85$\times$4rows (340pins, 전원제외)\\
+                  & 40$\times$4rows (160pins, 전원포함)\\
+      공급 전원 & +5V, +5V Standby \\
+      총 신호수 & 293 (전원제외, 입출력용 제외) \\ \hline
+  \end{tabular}
+\endgroup
+  \end{center}
+\end{table}
+%

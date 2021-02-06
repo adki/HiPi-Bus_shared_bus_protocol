@@ -1,0 +1,15 @@
+================================================
+	HiPi+Bus Ver.2.0
+================================================
+ch0 : cover, table of contents, revision history
+ch1 : HiPi-Bus Overview
+ch2 : Arbitration Bus
+ch3 : Data Transfer Bus
+ch4 : Interrupt Bus
+ch5 : Utility Bus
+ch6 : Timing Specifications
+ch7 : Electrical Specifications
+ch8 : Mechanical Specifications
+appendix : Appendix A and B
+td  : TD-form
+euc-kr-to-utf-8.sh To deal with hangul encoding.

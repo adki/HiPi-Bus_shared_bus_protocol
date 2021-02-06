@@ -1,0 +1,26 @@
+%
+\begin{table}[htbp]
+\caption{중재 버스의 규격}\label{table:arb-spec}
+   \begin{center}
+   \begin{tabular}{|l l|} \hline
+    \multicolumn{2}{|c|}{중재 프로토콜 (Arbitration Protocol)} \\ \hline
+      Arbitration Rule & Priority, Fairness \\
+      Arbitration Time & 1 Bus Clock (60.6 nsec) \\
+      Arbitration Scheme & Linear Self Arbitration \\
+      Arbiter Type & Distributed Arbiter \\ \hline
+    \multicolumn{2}{|c|}{어드레스 중재 버스 (Address Arbitration Bus)} \\ \hline
+      Arbitration Rule & Fairness and Priority \\
+      Fairness Algorithm & Fairness check and internal pending \\
+      Max. No. of Request Modules & 13 \\
+      Etc. & Aribtration Inhibit Function \\ \hline
+    \multicolumn{2}{|c|}{데이터 중재 버스 (Data Arbitration Bus)} \\ \hline
+      Arbitration Rule & Fairness and Priority \\
+      Fairness Algorithm & Fairness check and internal pending \\
+      Starvation Inhibit Algorithm & Time out \\
+      Max. No. of ResPonder Modules & 9 \\ \hline
+    \multicolumn{2}{|c|}{기타 (Etc.)} \\ \hline
+      Total No. of Signals & 26 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%

@@ -1,0 +1,20 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{전원규격 요약}\label{table:power-spec}
+   \begin{center}
+   \begin{tabular}{|c|l|c|c|c|} \hline
+	mnemonic & description & allowed   & ripple/noise & maximum current \\
+	         &             & variation & below 10MHz  & per slot \\ \hline
+\hline
+	+5V & +5V DC power & +0.25V/-0.125V & 50$m$A & 30A \\ \hline
+	+5V STB & +5V DC standby & +0.25V/-0.125V & 50$m$A & 1A \\ \hline
+	SGND & signal ground reference & & & \\ \hline
+	PGND & power ground reference & & & \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}
+%%%%

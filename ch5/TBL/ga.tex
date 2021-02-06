@@ -1,0 +1,20 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{슬롯 어드레스와 슬롯 위치}\label{table:ga}
+   \begin{center}
+   \begin{tabular}{|l|l l l l l l l l l c l l l l l l l l|} \hline
+	Slot No. & 0&1&2&3&4&5&6&7&8&...&13&14&15&16&17&18&19&20 \\
+\hline \hline
+	GA{\tt <}4{\tt >}* &0&0&0&0&0&0&0&0&0&...&0&0&0&1&1&1&1&1 \\
+	GA{\tt <}3{\tt >}* &0&0&0&0&0&0&0&0&1&...&1&1&1&0&0&0&0&0 \\
+	GA{\tt <}2{\tt >}* &0&0&0&0&1&1&1&1&0&...&1&1&1&0&0&0&0&1 \\
+	GA{\tt <}1{\tt >}* &0&0&1&1&0&0&1&1&0&...&0&1&1&0&0&1&1&0 \\
+	GA{\tt <}0{\tt >}* &0&1&0&1&0&1&0&1&0&...&1&0&1&0&1&0&1&0 \\
+\hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

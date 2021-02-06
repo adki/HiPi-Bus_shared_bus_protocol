@@ -1,0 +1,41 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{데이터 전송 버스의 신호선 요약}
+   \begin{center}
+   \begin{tabular}{|l|r|l|} \hline
+      Mnemonics & size & name \\ \hline \hline
+      \multicolumn{3}{|c|}{Address Bus} \\ \hline
+      A{\tt <}31..4{\tt >}*  & 28 & Address \\
+      AP{\tt <}3..0{\tt >}*  & 4 & Address Parity \\
+      SI{\tt <}7..0{\tt >}*  & 8 & Source Identification \\
+      SIP*                   & 1 & Source Identification Parity \\
+      AS{\tt <}2..0{\tt >}*  & 3 & Address Space \\
+      TT{\tt <}4..0{\tt >}*  & 5 & Transfer Types \\
+      STP*                   & 1 & Space + Types Parity \\
+      BE{\tt <}15..0{\tt >}* & 16 & Byte Enable \\
+      BEP{\tt <}1..0{\tt >}* & 2 & Byte Enable Parity \\
+      AE*                    & 1 & Address Bus Enable \\ \hline
+      \multicolumn{3}{|c|}{Data Bus} \\ \hline
+      D{\tt <}127..0{\tt >}* & 128 & Data \\
+      DP{\tt <}15..0{\tt >}* & 16 & Data Parity \\
+      DI{\tt <}7..0{\tt >}*  & 8 & Destination Identification \\
+      DIP*                   & 1 & Destination Identification Parity \\
+      DE*                    & 1 & Data Bus Enable \\ \hline
+      \multicolumn{3}{|c|}{Status Bus} \\ \hline
+      AACK{\tt <}1..0{\tt >}* & 2 & Address Acknowledge \\
+      SHD*                    & 1 & Hit on Shared Line \\
+      DTY*                    & 1 & Hit on Dirty Block \\
+      SNK*                    & 1 & Snoop No Acknowledge \\
+      ITV*                    & 1 & Intervention \\
+      LCR*                    & 1 & Hit On Interlocked Region \\
+      SPIN{\tt <}3..0{\tt >}* & 4 & Spin Queue Order \\
+      DACK*                   & 1 & Data Acknowledge \\
+      CDK*                    & 1 & Cache Data Acknowledge \\
+      BSY{\tt <}7..0{\tt >}* & 8 & Busy Status Line \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

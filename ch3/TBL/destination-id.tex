@@ -1,0 +1,17 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{종착점 식별자}
+   \begin{center}
+   \begin{tabular}{|l|l|l||l|} \hline
+      DI$<$7..6$>$* & DI$<$5..2$>$* & DI$<$1..0$>$* & meaning \\ \hline \hline
+      00 & {\it reserved\/} & {\it reserved\/} & {\it reserved\/} \\ \hline
+      01 & slot address     & channel id.      & to RQ only \\ \hline
+      l0 & slot address     & channel id.      & to RP only \\ \hline
+      11 & slot address     & channel id.      & to RQ and RP \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

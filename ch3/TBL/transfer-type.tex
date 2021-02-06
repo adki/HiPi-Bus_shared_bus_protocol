@@ -1,0 +1,26 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{전송 형태}
+   \begin{center}
+   \begin{tabular}{|l|l|l|l|l|l|} \hline
+      TT{\tt <}4..0{\tt >}* & mnemonics & name & group & affect cache & size \\ \hline \hline
+      0x00 & NRD & normal read        & read  & yes & 1--16 \\ \hline
+      0x08 & NWR & normal write       & write & yes & 1--16 \\ \hline
+      0x07 & NCR & non-coherent read  & read  & no  & 1--16 \\ \hline
+      0x0F & NCW & non-coherent write & write & no  & 1--16 \\ \hline
+      0x03 & IVD & invalidation       &       & yes & \\ \hline
+      0x04 & ILR & interlock read     & read  & yes & 1--16 \\ \hline
+      0x0C & ILW & interlock write    & write & yes & 1--16 \\ \hline
+      0x10 & BRD & block read         & read  & yes & 64 \\ \hline
+      0x18 & BWR & block write        & write & yes & 64 \\ \hline
+      0x12 & CRD & coherent read      & read  & yes & 64 \\ \hline
+      0x11 & EXR & exclusive read     & read  & yes & 64 \\ \hline
+      0x19 & WRB & writeback          & write & yes & 64 \\ \hline
+      0x1B & ITW & intervention write & write & yes & 64 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

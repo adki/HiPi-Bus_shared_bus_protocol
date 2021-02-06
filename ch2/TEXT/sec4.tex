@@ -1,0 +1,18 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 2 sec 4
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: sec4
+%%RelatedFile: ch2
+%%%%%
+\section{어드레스 버스 중재}
+어드레스 버스 중재(address bus arbitration)는
+어드레스 기본 사이클(address basic cycle)과
+어드레스 데이터 기본 사이클(address data basic cycle)에 앞서 항상 수행해야 된다.
+어드레스 버스 중재는 선형 자가 중재 기법을 사용하며 공정성 규칙을 지켜야 한다.
+그러나 재시도(retry)하는 경우는 공정성 규칙을 무시한다.
+ABINH* 신호가 구동되어 있는 동안은 중재를 수행하지 않거나 중재의 결과를 무시하여야 한다.
+WRINH* 신호가 구동되어 있는 동안은 쓰기에 관련된 전송의
+중재를 수행하지 않거나 중재의 결과를 무시하여야 한다. \\
+일정시간 이상 메모리 참조에 실패한 경우 ABINH* 신호를 구동할 수 있다.
+%

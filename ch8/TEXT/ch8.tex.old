@@ -1,0 +1,49 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 1
+%%Creator: Ando Ki
+%%CreationDate: September 1992
+%%FileName: ch8
+%%RelatedFile:
+%%%%%
+\documentclass[12pt]{book}
+\usepackage{hangul}
+\usepackage{a4wide}
+\usepackage{psfig}
+\usepackage{fancyheadings}
+%%%
+\pagestyle{fancy}
+\setlength{\headrulewidth}{0pt}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{무단복제금지 \psfig{figure=smalletri.ps} ETRI Proprietary}
+\cfoot{}
+\rfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%
+\begin{document}
+%
+%
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+%
+\newpage
+\pagenumbering{arabic}
+\setcounter{chapter}{7}
+\setcounter{page}{99}
+%
+\chapter{기계적 규격}
+%
+\input{sec1}
+\input{sec2}
+\input{sec3}
+\input{sec4}
+\input{sec5}
+\input{sec6}
+\input{sec7}
+\input{sec8}
+\end{document}
+%%%%%

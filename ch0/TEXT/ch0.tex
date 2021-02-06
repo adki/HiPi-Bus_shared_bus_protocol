@@ -1,0 +1,67 @@
+%%%%%
+%%Title: HiPi+Bus V1.1 Chapter 0
+%%Creator: Ando Ki
+%%CreationDate:
+%%FileName: ch0
+%%RelatedFile:
+%%%%%
+\documentclass[12pt]{book}
+\usepackage{hangul}
+\usepackage{a4wide}
+\usepackage{psfig}
+\usepackage{fancyheadings}
+%%%
+\pagestyle{fancy}
+\setlength{\headrulewidth}{0pt}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{무단복제금지 \psfig{figure=smalletri.ps} ETRI Proprietary}
+\cfoot{}
+\rfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%
+%\nofiles
+%
+\begin{document}
+\def\HB{HiPi+Bus}	% define system bus name
+%
+\pagenumbering{roman}
+\tableofcontents
+\addcontentsline{toc}{chapter}{목차}
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{그림목차}
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{표목차}
+%
+\newpage
+\chapter*{변경이력}
+\addcontentsline{toc}{chapter}{변경이력}
+%
+\begin{enumerate}
+  \item 1993년 2월 12일 : Ver.1.0 작성완료
+  \item 1993년 2월 22일 : BLK103-21-1.0 문서등록
+  \item 1993년 8월 16일 : Ver.1.1 작성완료
+	\begin{itemize}
+	  \item 오자교정
+	  \item BCLK$<$9..0$>$*를 BCLK*로 변경
+	  \item DI$<$7..0$>$*의 의미를 확장함 (표3.10 참고)
+	  \item WRB 전송형태의 의미를 확장함 (제3.2.1장 Transfer Type 설명 참고)
+	  \item 제7장 전기적 규격에 TTL 관련 규격을 추가함
+	  \item 제8장 기계적 규격의 내용을 변경함
+	  \item 부록을 추가함
+	\end{itemize}
+  \item 1993년 8월 23일 : BLK103-21-1.1 문서등록
+  \item 1993년 12월 16일 : Ver.2.0 작성완료
+	\begin{itemize}
+	  \item 오자교정
+	  \item 제3장 데이터전송버스의 내용중 BE$<$15..0$>$* 부분 변경
+	  \item 제8장 기계적 규격의 내용중 백플레인 크기와 주보드 크기를 정정함
+	\end{itemize}
+\end{enumerate}
+%%%%%
+\end{document}
+%%%%%

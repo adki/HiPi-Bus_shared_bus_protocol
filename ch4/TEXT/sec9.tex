@@ -1,0 +1,18 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 4 Section 8
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: sec9
+%%RelatedFile: ch4
+%%%%%
+\section{예외 처리 (Exception Handling)}
+본 절에서는 인터럽트 버스 상에서 동작 중에 앞에서 정의되지 않은 상태가 발생했을 때
+처리하는 방법에 대해 기술한다.
+
+\subsection{전송 에러 (Transmission Error)}
+인터럽트 전송 주기 안에서 처리기가 패리티 에러를 검출한 경우를 말한다.
+처리기는 응답 단계를 통하여 요청기로 전송 중에 에러가 발생했음을 통고하고,
+받은 인터럽트는 등록하지 않는다. 요청기는 전송 에러를 받으면
+중재 주기 부터 다시 인터럽트 전송을 재시도 (Retry)한다.
+재시도한 전송 주기에서 다시 동일한 에러를 검출할 경우는 고장이 발생했음을
+시스템 콘트롤러에 전달하고 그 이후의 동작은 버스 규격에서 제시하지 않는다.

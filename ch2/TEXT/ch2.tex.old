@@ -1,0 +1,51 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 2
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: ch2
+%%RelatedFile: sec1 sec2
+%%%%%
+\documentclass[12pt]{book}
+\usepackage{hangul}
+\usepackage{a4wide}
+\usepackage{psfig}
+\usepackage{fancyheadings}
+%%%
+%\setstretch{1.2}
+\pagestyle{fancy}
+\setlength{\headrulewidth}{0pt}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{무단복제금지 \psfig{figure=smalletri.ps} ETRI Proprietary}
+\cfoot{}
+\rfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%
+\begin{document}
+%
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+%
+\newpage
+\pagenumbering{arabic}
+\setcounter{chapter}{1}
+\setcounter{page}{13}
+%
+\chapter{중재 버스}
+%
+\input{sec1}
+\newpage
+\input{sec2}
+\newpage
+\input{sec3}
+\newpage
+\input{sec4}
+\newpage
+\input{sec5}
+%%%%%
+\end{document}
+%%%%%

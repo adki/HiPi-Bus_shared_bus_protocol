@@ -1,0 +1,38 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{인터럽트 버스의 규격 요약}\label{table:ib-spec}
+   \begin{center}
+   \begin{tabular}{|l l|} \hline
+      \multicolumn{2}{|c|}{인터럽트 전송 프로토콜 (Interrupt Transfer Protocols)} \\
+\hline
+      Protocol & Message passing protocols \\
+      제어 방식 & 동기형 (Synchronous) \\
+      클럭의 속도 & 16.5 MHz (60.6 {\it n\/}sec) \\
+\hline
+      \multicolumn{2}{|c|}{버스 사용을 위한 중재 (Arbitration)} \\
+\hline
+      중재 규칙 & Priority \\
+      중재 수행 시간 & 5 Bus Clock (303.0 {\it n\/}sec) \\
+      중재 기법 & Coded Self Arbitration Scheme \\
+      중재기의 특성 & 분산형 중재기 \\
+\hline
+      \multicolumn{2}{|c|}{성 능 (Performance)} \\
+\hline
+      전송속도 & 약 1.6 MDI/sec (Mega Direct Interrupts per second) \\
+      & 약 0.6 MAI/sec (Mega Arbit. Interrupts per second) \\
+\hline
+      \multicolumn{2}{|c|}{에러 방어 (Error Protection)} \\
+\hline
+      에러 검출 (Error Detection) & 바이트 단위의 홀수 패리티(odd parity) \\
+      에러의 처리 (Error Handling) & 재시도 (Retry) \\
+\hline
+      \multicolumn{2}{|c|}{기 타 (Etc.)} \\
+\hline
+      총 신호수 & 10 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

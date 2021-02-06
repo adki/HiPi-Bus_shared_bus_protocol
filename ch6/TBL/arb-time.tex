@@ -1,0 +1,21 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{중재버스 신호의 시간규격 요약}\label{table:arb-time}
+   \begin{center}
+   \begin{tabular}{|l|l|r|r|r|} \hline
+	timing parameter & name & min & typical & max \\ \hline \hline
+	$TP^{BCLK}_0$ & BCLK* cycle time & 59 & 60 & 61 \\ \hline
+	$TP^{ARB}_0$  & arbitration time & - & 50 & - \\ \hline
+	$TP^{ARB}_1$  & pre-time & - & - & 10 \\ \hline
+	$TP^{ARB}_2$  & bus propagation time & - & - & 20 \\ \hline
+	$TP^{ARB}_3$  & off time & 10 & - & 15 \\ \hline \hline
+	$TP^{INH}_0$  & ABINH time & 25 & 30 & 35 \\ \hline
+	$TP^{INH}_1$  & bus propagation time & - & - & 20 \\ \hline
+	$TP^{INH}_2$  & off time & 10 & - & 15 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

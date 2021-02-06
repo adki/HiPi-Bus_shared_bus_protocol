@@ -1,0 +1,18 @@
+%
+\begin{table}[htbp]
+\caption{중재 버스의 신호들}\label{table:arb-signal}
+   \begin{center}
+   \begin{tabular}{|l|l|l|} \hline
+      Mnemonic & Size & Name \\ \hline \hline
+      \multicolumn{3}{|c|}{Address Arbitration Bus} \\ \hline
+      ABRQ{\tt <}12..0{\tt >}* & 13 & Address Bus Request \\
+      ABINH*                   & 1 & Address Bus Arbitration Inhibit \\
+      WRINH*                   & 1 & Write Bus Cycle Inhibit \\ \hline
+      \multicolumn{3}{|c|}{Data Arbitration Bus} \\ \hline
+      DBRQ{\tt <}8..0{\tt >}*  & 9 & Data Bus Request \\
+      DBINH*                   & 1 & Data Bus Arbitration Inhibit \\
+      PCW*                     & 1 & Priority Change Window \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%

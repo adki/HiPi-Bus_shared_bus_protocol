@@ -1,0 +1,50 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 6
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: sec5
+%%RelatedFile: ch6
+%%%%%
+\section{인터럽트버스의 시간규격}
+%
+\subsection{IBSYNC* 신호의 시간규격}
+IBSYNC* 신호는
+백플레인에 나타나는 버스클럭의 하강점에서 $TP^{IBSYNC}_0$후에
+안정된 신호를 래치할 수 있도록 셋업시간으로 $TP^{IBSYNC}_2$을
+홀드시간으로 $TP^{IBSYNC}_3$를 보장해야 한다.
+IBSYNC* 신호를 ``거짓(high voltage level)''로 하기 위해서는
+구동을 멈추어야 하는데 이때 다음 신호에 영향을 주지 못하도록 $TP^{IBSYNC}_4$을
+보장해야 한다. 여러 버스 사이클 동안 구동하는 경우, $TP^{IBSYNC}_1$은
+처음 사이클에서, $TP^{IBSYNC}_4$는 마지막 사이클에서만 지키면 된다.
+\input{ch6/TBL/ibsync-time}
+\begin{figure}[htb]
+    \centerline{\includegraphics{ch6/FIG/ibsync-time.jpg}}
+   \caption{IBSYNC* 신호의 시간규격}\label{figure:ibsync-time}
+\end{figure}
+%
+%
+\subsection{인터럽트 버스 중재 동작의 시간 규격}
+중재 주기는 버스 클럭 (BCLK*)의 하강점부터 시작되며,
+$TP^{IBARB}_0 + TP^{IBARB}_1$동안 신호를 구동해야 한다.
+특히 중재결과는 $TP^{IBARB}_0$ 시점에 래치할 수 있도록 안정된 신호를
+보장해야 한다.
+\input{ch6/TBL/ibarb-time}
+\begin{figure}[htb]
+    \centerline{\includegraphics{ch6/FIG/ibarb-time.jpg}}
+   \caption{인터럽트 버스 중재 동작의 시간규격}\label{figure:ibarb-time}
+\end{figure}
+%
+\subsection{인터럽트 버스 인터럽트 데이터 전송 주기의 시간 규격}
+인터럽트 버스를 통하여 전송하고자 하는 데이터의 신호는
+백플레인에 나타나는 버스클럭의 하강점에서 $TP^{IBD}_0$ 후에
+안정된 신호를 래치할 수 있도록 셋업시간으로 $TP^{IBD}_2$을
+홀드시간으로 $TP^{IBD}_3$를 보장하여야 한다.
+그리고 앞과 뒤 신호에 영향을 주지 않도록 $TP^{IBSYNC}_4$을
+보장하여야 한다.
+%
+\input{ch6/TBL/ibd-time}
+\begin{figure}[htb]
+    \centerline{\includegraphics{ch6/FIG/ibd-time.jpg}}
+   \caption{인터럽트 버스의 데이터 전송의 시간규격}\label{figure:ibd-time}
+\end{figure}
+%%%

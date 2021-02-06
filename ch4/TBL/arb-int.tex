@@ -1,0 +1,41 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{중재 인터럽트 1의 단계별 전송 정보}\label{table:arb-int}
+   \begin{center}
+   \begin{tabular}{|l|l|l|l|} \hline
+	phase & transfer information & from & to \\
+\hline \hline
+	-5 & Interrupt Class + slot id + id in slot & IR & IR's \\
+	-4 & Interrupt Class + slot id + id in slot & IR & IR's \\
+	-3 & Interrupt Class + slot id + id in slot & IR & IR's \\
+	-2 & Interrupt Class + slot id + id in slot & IR & IR's \\
+	-1 & Interrupt Class + slot id + id in slot & IR & IR's \\ \hline
+	0 & Interrupt Class + Type + Destination Group ID & IR & IH's \\ \hline
+	1 & dummy                                         & - & - \\ \hline
+	2 & invers num. of Interrupts in Handler & IH's & IH's \\
+	3 & invers num. of Interrupts in Handler & IH's & IH's \\
+	4 & invers num. of Interrupts in Handler & IH's & IH's \\
+	5 & invers num. of Interrupts in Handler & IH's & IH's \\
+	6 & invers num. of Interrupts in Handler & IH's & IH's \\ \hline
+	7 & invers Priority of Process & IH's & IH's \\
+	8 & invers Priority of Process & IH's & IH's \\
+	9 & invers Priority of Process & IH's & IH's \\
+	10 & invers Priority of Process & IH's & IH's \\
+	11 & invers Priority of Process & IH's & IH's \\ \hline
+	12 & Slot Address of Handler & IH's & IH's \\
+	13 & Slot Address of Handler & IH's & IH's \\
+	14 & Slot Address of Handler & IH's & IH's \\
+	15 & Slot Address of Handler & IH's & IH's \\
+	16 & Slot Address of Handler & IH's & IH's \\ \hline
+	17 & Source Address & IR & IH \\ \hline
+	18 & Vector 1 & IR & IH \\ \hline
+	19 & Vector 0 & IR & IH \\ \hline
+	20 & dummy & - & - \\ \hline
+	21 & Acknowledge & IH & IR \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

@@ -1,0 +1,17 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{어드레스 응답}
+   \begin{center}
+   \begin{tabular}{|l|l|l|} \hline
+      AACK$<$1..0$>$* & status & description \\ \hline \hline
+      00 & error & 전송된 어드레스 버스의 정보에 오류가 발견됨 \\ \hline
+      01 & busy & 전송된 어드레스 버스의 정보를 현재 받을 수 없는 상태임 \\ \hline
+      10 & lock & 요청한 영역이 잠겨 있음 \\ \hline
+      11 & no error & 전송된 어드레스 버스의 정보를 잘 받았음 \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

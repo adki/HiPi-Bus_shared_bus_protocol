@@ -1,0 +1,68 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 1 Section 1
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: sec1
+%%RelatedFile: ch1
+%%%%%
+\section{서론}
+\subsection{개발 목적 및 내용}
+공유메모리를 사용하는 다중프로세서 구조를 갖는 시스템에서 프로세서와 메모리 사이의
+정보 통로로 사용할 공유버스를 설계하는 것이 본 문서의 목적이다.
+\HB\footnote{Highly Pipelined Plus Bus : \HB :
+/hai-pai-pl\'{$\land$}s-b$\land$s/}는 시스템 버스이며,
+이러한 시스템 버스를 설계하는 목표는 다음과 같다.
+\begin{itemize}
+  \item 공유메모리 다중프로세서 구조를 지원 \\
+	공유메모리를 사용하는 다중프로세서 구조에서 프로세서와 메모리를 버스를
+	이용하여 연결시킬때 시스템 버스는 데이터 전송 프로토콜, 전송속도,
+	중재방법, 그리고 인터럽트 등 버스의 각 부분에서 다중프로세서를 지원하기
+	위한 고려가 필요하다.
+  \item 고성능 컴퓨터 지원 \\
+	목표로하는 다중프로세서의 성능이 고성능이기 위해서는 시스템 버스도 이에
+	어울리는 성능과 기능을 제공해야 하며 이를 위해 데이터 전송 능력,
+	데이터 전송의 신뢰도, 시스템 구성 능력, 시스템 유지 보수를 위한 기능 등이
+	고려되어야 한다.
+\end{itemize}
+\subsection{본 문서의 구성}
+본 문서의 구성은 제 1 장에서 전체적인 구성과 설계 개념을 기술하고,
+제 2 장에는 중재버스, 제 3 장에는 데이터 전송 버스, 제 4 장에는
+인터럽트 버스, 제 5 장에는 유틸리티 버스, 제 6 장에는 시간 규격,
+제 7 장에는 전기적 규격, 제 8 장에는 기계적 규격을 담고 있다.
+\subsection{관련문서}
+\begin{description}
+  \item[(1)] 고속중형컴퓨터 (주전산기 III) 요구사항 정의서, SYS000-20-3.0,
+	컴퓨터시스템연구실, 시스템공학연구부, 한국전자통신연구소, 1993.
+  \item[(2)] 고속중형컴퓨터 (주전산기 III) 시스템 설계서, SYS000-21-3.0,
+	컴퓨터시스템연구실, 시스템공학연구부, 한국전자통신연구소, 1993.
+  \item[(3)] 고속중형컴퓨터 (주전산기 III) 하드웨어 서브시스템 설계서, SUS100-21-2.0,
+	컴퓨터시스템연구실, 시스템공학연구부, 한국전자통신연구소, 1994.1.
+\end{description}
+\subsection{문서트리}
+\input{ch1/TPIC/doc-tree}
+\subsection{참고자료}
+\begin{description}
+  \item[(1)] 컴퓨터구조연구실, {\em TICOM 시스템 버스 사용자 지침서 (TD88-6121-133.B)},
+	시스템구조연구부, 한국전자통신연구소, 1990.11.
+  \item[(2)] 컴퓨터구조연구실, {\em 시스템 버스 표준 인터페이스 설계서 Ver.2.0 (TM93-CA-017.B)},
+	시스템구조연구부, 한국전자통신연구소, 1993.7.
+  \item[(3)] 컴퓨터구조연구실, {\em TTL 회로 설계의 고려사항 (TM92-CA-039)},
+	시스템구조연구부, 한국전자통신연구소, 1992.6.26.
+  \item[(4)] 컴퓨터구조연구실, {\em HiPi+Bus의 임계시간 (TM92-CA-053)},
+	시스템구조연구부, 한국전자통신연구소, 1992.11.16.
+  \item[(5)] 컴퓨터구조연구실, {\em BTL 기초조사 (TM93-CA-001.B)},
+	시스템구조연구부, 한국전자통신연구소, 1993.2.
+  \item[(6)] IEEE, {\em IEEE Standard Test Access Port
+	and Boundary-Scan Architecture}, IEEE std.1149.1, 1990.
+  \item[(7)] IEEE, {\em IEEE Standard for Electrical Characteristics of
+	Backplane Transceiver Logic (BTL) Interface Circuits},
+	IEEE std.1194.1, 1991.
+  \item[(8)] 컴퓨터구조연구실, {\em Semaphore Cache {\it (Draft)\/}},
+	시스템구조연구부, 한국전자통신연구소, 1993.
+  \item[(9)] 컴퓨터구조연구실, {\em 인터럽트 관련 모듈 설계서 {\it (Draft)\/}},
+	시스템구조연구부, 한국전자통신연구소, 1993.
+  \item[(10)] 컴퓨터구조연구실, {\em 고속중형컴퓨터 클럭 서브 시스템 (TM93-CA-020)},
+	시스템구조연구부, 한국전자통신연구소, 1993.4.
+\end{description}
+%
+%%%%%

@@ -1,0 +1,59 @@
+%\documentstyle[11pt,a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{신호선들}\label{table:signals}
+   \begin{center}
+\begingroup
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+\renewcommand{\arraystretch}{0.9} % Default value: 1
+   \begin{tabular}{|l|l|r|l|} \hline
+Bus&Mnemonic & Size & Name \\ \hline \hline
+     & {\bf ABRQ$<$12..0$>$*} & 13 & Address Bus Request \\
+     & {\bf ABINH*}                    & 1 & Address Bus Arbitration Inhibition \\
+중재버스 & {\bf WRINH*}                    & 1 & Write Cycle Inhibition \\
+     & {\bf DBRQ$<$8..0$>$*}  & 9 & Data Bus Request \\
+     & {\bf DBINH*}                    & 1 & Data Bus Arbitration Inhibition \\
+     & {\bf PCW*}                      & 1 & Priority Change Window \\ \hline
+         & {\bf A$<$31..4$>$*}     & 28 & Address \\
+         & {\bf AP$<$3..0$>$*}     & 4 & Address Parity \\
+         & {\bf SI$<$7..0$>$*}     & 8 & Source Identification \\
+         & {\bf SIP*}                      & 1 & Source Identification Parity \\
+데이터전송버스  & {\bf AS$<$2..0$>$*}     & 3 & Address Space \\
+(어드레스버스) & {\bf TT$<$4..0$>$*}     & 5 & Transfer Types \\
+         & {\bf STP*}                      & 1 & Space + Types Parity \\
+         & {\bf BE$<$15..0$>$*}    & 16 & Byte Enable \\
+         & {\bf BEP$<$1..0$>$*}    & 2 & Byte Enable Parity \\
+         & {\bf AE*}                       & 1 & Address Cycle Enable \\ \hline
+         & {\bf D$<$127..0$>$*}    & 128 & Data \\
+데이터전송버스  & {\bf DP$<$15..0$>$*}    & 16 & Data Parity \\
+(데이터버스)  & {\bf DI$<$7..0$>$*}     & 8 & Destination Identification \\
+         & {\bf DIP*}                      & 1 & Destination Identification Parity \\
+         & {\bf DE*}                       & 1 & Data Cycle Enable \\ \hline
+        & {\bf AACK$<$1..0$>$*}   & 2 & Address Acknowledge \\
+        & {\bf SHD*}                      & 1 & Hit on Shared Line \\
+        & {\bf DTY*}                      & 1 & Hit on Dirty Line \\
+데이터전송버스 & {\bf SNK*}                      & 1 & Snoop No Acknowledge \\
+(상태버스)  & {\bf ITV*}                      & 1 & Intervention \\
+        & {\bf LCR*}                      & 1 & Hit on Interlocked Region \\
+        & {\bf DACK*}                     & 1 & Data Acknowledge \\
+        & {\bf CDK*}                      & 1 & Cache Data Acknowledge \\
+        & {\bf SPIN$<$3..0$>$*}   & 4 & Spin Queue Order \\
+        & {\bf BSY$<$7..0$>$*}    & 8 & Busy Status Line \\ \hline    
+인터럽트 & {\bf IBSYNC*}                   & 1 & Interrupt Bus Sync. \\
+전송버스 & {\bf IBD$<$7..0$>$*}    & 8 & Interrupt Bus Data \\
+     & {\bf IBDP*}                     & 1 & Interrupt Bus Data Parity \\ \hline
+       & {\bf BCLK*}                   & 1 & Bus Clock \\
+유틸리티버스 & {\bf RST*}                      & 1 & System Reset \\
+       & {\bf SFAIL*}                    & 1 & System Fail \\
+       & {\bf GA$<$4..0$>$*}     & 5 & Geographical Slot Address \\
+       & {\bf Tx$<$4..0$>$}     & 5 & JTAG Boundary Scan Option \\ \hline
+       & {\it total\/} & 293 & \\
+\hline
+   \end{tabular}
+\endgroup
+   \end{center}
+\end{table}
+%
+%\end{document}
+%%%%

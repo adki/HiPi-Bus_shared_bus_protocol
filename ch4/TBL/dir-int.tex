@@ -1,0 +1,24 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{지정 인터럽트의 단계별 전송 정보}\label{table:dir-int}
+   \begin{center}
+   \begin{tabular}{|l|l|l|l|} \hline
+	phase & transfer information & from & to \\
+\hline \hline
+	-5 & interrupt class + slot id + id in slot & IR & IR's \\
+	-4 & interrupt class + slot id + id in slot & IR & IR's \\
+	-3 & interrupt class + slot id + id in slot & IR & IR's \\
+	-2 & interrupt class + slot id + id in slot & IR & IR's \\
+	-1 & interrupt class + slot id + id in slot & IR & IR's \\ \hline
+	0  & interrupt class + destination address  & IR & IH's \\ \hline
+	1  & vector type + source address           & IR & IH \\ \hline
+	2  & vector                                 & IR & IH \\ \hline
+	3  & dummy                                  & -  & - \\ \hline
+	4  & acknowledge                            & IH & IR \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

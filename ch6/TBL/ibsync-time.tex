@@ -1,0 +1,19 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{IBSYNC* 신호의 시간규격 요약}\label{table:ibsync-time}
+   \begin{center}
+   \begin{tabular}{|l|l|r|r|r|} \hline
+	timing parameter & name & min & typical & max \\ \hline \hline
+	$TP^{BCLK}_0$   & BCLK* cycle time & 59 & 60 & 61 \\ \hline
+	$TP^{IBSYNC}_0$  & IBSYNC* latch point & 38 & 40 & 42 \\ \hline
+	$TP^{IBSYNC}_1$  & bus propagation time & - & - & 20 \\ \hline
+	$TP^{IBSYNC}_2$  & IBSYNC* setup time & 10 & - & - \\ \hline
+	$TP^{IBSYNC}_3$  & IBSYNC* hold time & 5 & - & - \\ \hline
+	$TP^{IBSYNC}_4$  & IBSYNC* guard time & 10 & - & - \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

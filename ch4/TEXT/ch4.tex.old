@@ -1,0 +1,61 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 4
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: ch4
+%%RelatedFile: sec1 sec2
+%%%%%
+\documentclass[12pt]{book}
+\usepackage{hangul}
+\usepackage{a4wide}
+\usepackage{psfig}
+\usepackage{fancyheadings}
+%%%
+\pagestyle{fancy}
+\setlength{\headrulewidth}{0pt}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{무단복제금지 \psfig{figure=smalletri.ps} ETRI Proprietary}
+\cfoot{}
+\rfoot{\thepage}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%
+\begin{document}
+%
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+%
+\newpage
+\pagenumbering{arabic}
+\setcounter{chapter}{3}
+\setcounter{page}{55}
+%
+\chapter{인터럽트 버스}
+%
+\input{sec1}
+\newpage
+\input{sec2}
+\newpage
+\input{sec3}
+\newpage
+\input{sec4}
+\newpage
+\input{sec5}
+\newpage
+\input{sec6}
+\newpage
+\input{sec7}
+\newpage
+\input{sec8}
+\newpage
+\input{sec9}
+\clearpage
+
+이면은 공면 .......
+%%%%%
+\end{document}
+%%%%%

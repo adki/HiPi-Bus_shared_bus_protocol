@@ -1,0 +1,20 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{경계주사}\label{table:jtag}
+   \begin{center}
+   \begin{tabular}{|l|l|l|} \hline
+	& define & description \\
+\hline \hline
+	Tx{\tt <}4{\tt >} & TRST* & Test Reset Input \\
+	Tx{\tt <}3{\tt >} & TDO   & Test Data Out \\
+	Tx{\tt <}2{\tt >} & TDI   & Test Data Input \\
+	Tx{\tt <}1{\tt >} & TMS   & Test Mode Select Input \\
+	Tx{\tt <}0{\tt >} & TCK   & Test Clock Input \\
+\hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

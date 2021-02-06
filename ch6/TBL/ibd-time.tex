@@ -1,0 +1,19 @@
+%\documentstyle[a4]{hbook}
+%\begin{document}
+%
+\begin{table}[htbp]
+\caption{인터럽트 버스의 인터럽트 데이터 신호의 시간규격 요약}\label{table:ibd-time}
+   \begin{center}
+   \begin{tabular}{|l|l|r|r|r|} \hline
+	timing parameter & name & min & typical & max \\ \hline \hline
+	$TP^{BCLK}_0$ & BCLK* cycle time & 59 & 60 & 61 \\ \hline
+	$TP^{IBD}_0$  & IBD{\tt <}n{\tt >}* signal latch point & 38 & 40 & 42 \\ \hline
+	$TP^{IBD}_1$  & bus propagation time & - & - & 20 \\ \hline
+	$TP^{IBD}_2$  & setup time & 10 & - & - \\ \hline
+	$TP^{IBD}_3$  & hold time & 5 & - & - \\ \hline
+	$TP^{IBD}_4$  & guard time & 10 & - & - \\ \hline
+   \end{tabular}
+   \end{center}
+\end{table}
+%
+%\end{document}

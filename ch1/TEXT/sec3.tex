@@ -1,0 +1,133 @@
+%%%%%
+%%Title: HiPi+Bus V0.2 Chapter 1 Section 4
+%%Creator: Ando Ki
+%%CreationDate: April 1992
+%%FileName: sec3
+%%RelatedFile: ch1
+%%%%%
+\section{블록 구조}
+
+\subsection{관련 블록 간 구조}
+시스템 버스 블록(BUS block)은 {\tt <}그림~\ref{figure:block-relation}{\tt >}에서
+굵은 선으로 표시된 부분에 해당한다.
+%
+\input{ch1/TPIC/block-relation}
+%
+즉 하드웨어 서브시스템에서 주 처리 장치 블록(MPU block),
+주 기억 장치 블록(MEM block), 입출력 처리기 블록(IOP block), 시스템
+제어기 블록(SCM block), 그리고 패키징 블록(PAC block)이 전기적, 기계적, 기능적으로
+백플레인에 의해 연결될 때 이 백플레인을
+포함한 전기적, 기계적, 기능적 집합체를 시스템 버스 블록이라 한다.
+
+\subsection{시스템의 구성}
+공유메모리를 갖는 다중 프로세서 시스템의 시스템 버스인 
+\HB는
+프로세스, 메모리, 기타 버스 상에 장착되는 보드들 사이의 정보 교환 통로로써 이용된다.
+%
+\begin{figure}[htb]
+    \centerline{\includegraphics[height=3.5in]{ch1/FIG/system.jpg}} %\centerline{\psfig{figure=ch1/FIG/system.ps,height=3.5in}}
+   \caption{시스템 구성}\label{figure:system-config}
+\end{figure}
+%
+
+\subsection{주요규격}
+시스템 버스 블록(BUS block)의 주요규격은 {\tt <}표~\ref{table:bus-spec}{\tt >}와
+같다.
+\input{ch1/TBL/bus-spec}
+
+\subsection{블록의 구조}
+시스템 버스 블록(BUS block)은 {\tt <}그림~\ref{figure:block}{\tt >}와
+같이 크게 중재버스(arbitration bus), 데이터 전송버스(dtat transfer bus),
+인터럽트 전송버스(interrupt transfer bus), 그리고 유틸리티 버스(utility bus)로
+구분된다.
+%
+\begin{figure}[htb]
+    \centerline{\includegraphics{ch1/FIG/block.jpg}} %\centerline{\psfig{figure=ch1/FIG/block.ps}}
+   \caption{버스 블록의 구조}\label{figure:block}
+\end{figure}
+%
+그리고 중재버스는 어드레스 버스 중재버스(address bus arbitration bus)와
+데이터 버스 중재버스(data bus arbitration bus)로 구성되고,
+데이터 전송버스는 어드레스 버스(address bus), 데이터 버스(data bus),
+그리고 상태 버스(status bus)로 구성된다.
+
+\subsection{버스신호들}
+시스템 버스에서 정의하여 사용하는 버스 신호들은 {\tt <}표~\ref{table:signals}{\tt >}와
+같다.
+\input{ch1/TBL/signals}
+
+\subsection{문서 작성의 규칙}
+
+\subsubsection{신호 이름에 대한 규칙}
+\begin{itemize}
+  \item 버스 신호의 Mnemonics은 모두 대문자를 사용한다. \\
+	예: AE*, DE*, A{\tt <}31..4{\tt >}*
+  \item 버스 신호의 Mnemonics은 신호 이름 중에서 신호 이름을 대표할 수 있는 앞뒤 몇 문자를 사용한다. \\
+	예: Bus Clock : BCLK*; Shared Line : SHD*
+  \item 버스 상의 모든 신호의 끝에는 모두 *를 붙힌다. 이는 버스 신호의 전압이 낮은 상태일 때 
+	``참 (true)''이 됨을 의미한다. \\
+	예: A{\tt <}0{\tt >}*, DTY*
+  \item 동일한 이름을 갖는 여러 비트의 신호는 {\tt <}{\tt >}을 사용하여 번호와 크기를 나타낸다. \\
+	예: A{\tt <}31..4{\tt >}*,
+	A{\tt <}4{\tt >}*, D{\tt <}127..0{\tt >}*, TT{\tt <}3{\tt >}*
+  \item 번호는 큰 쪽을 먼저 쓰는 것을 기본(default)으로 한다. \\
+	예: A{\tt <}31..4{\tt >}*, D{\tt <}127..0{\tt >}*,
+	TT{\tt <}3..0{\tt >}*
+  \item 동일 이름을 갖는 여러 비트의 신호중 임의의 한 신호 또는 한 비트를 지칭할 때는 {\tt <}n{\tt >}을 사용한다. \\
+	예: A{\tt <}n{\tt >}*, D{\tt <}n{\tt >}*,TT{\tt <}n{\tt >}*
+  \item 동일 이름을 갖는 여러 비트의 신호를 총칭할 때는 비트 폭을 모두 표시하거나 또는 비트 폭 표시가 없는
+	Mnemonics만으로 표시한다. \\
+	예: A{\tt <}31..4{\tt >}* 또는 A*; D{\tt <}127..0{\tt >}* 또는 D*
+\end{itemize}
+%
+
+\subsubsection{신호의 상태에 대한 규칙}
+\begin{itemize}
+  \item 신호의 상태는 신호의 논리적인 값(``참''/``거짓'')을 표현하는 방법을 주로 사용하고,
+	경우에 따라 버스상에 전압의 높낮음(``high''/``low'')으로 표현하는 방법을 사용한다.
+  \item 신호의 논리적인 값을 표현하기 위하여 ``참'', ``거짓'', ``true'', ``false'', 
+	T (True의 약자), F (False의 약자), 1, 0을 사용한다.
+	``참'', ``true'', T, 1이 같은 값이고, ``거짓'', ``false'', F, 0이 같은 값이다.
+	신호의 논리적인 값을 나타낼 때 신호 뒤에 붙는 *는 논리적인 값에 의미를 갖지 않는다. \\
+	예: AE* = T, AE = 1, AE* = ``true'', AE* = ``low'', AE* = L : same state \\
+	예: DE* = F, DE = 0, DE* = ``false'', DE* = ``high'', DE* = H : same state
+  \item 신호의 상태 중 버스 상의 전압 레벨로 표현하기 위하여 ``high'', ``low'', H, L를 사용한다.
+	이때 신호의 뒤에 붙는 *는 전압의 레벨를 반대로 하는 역할을 한다. \\
+	예: AE* = ``high'', AE* = H, AE = L : same state \\
+	예: DE* = ``low'', DE* = L, DE = H : same state
+  \item 여러개의 신호가 모여서 의미를 갖는 상태를 나타낼 경우 그 신호의 논리적인
+	값은 숫자로 표현할 수 있다. 이때 값의 표현 방법은 
+	16진수(Hexadecimal)를 기본(default)으로 한다. \\
+	16진수(Hexadecimal)를 나타내는 prefix로 `0x'를 사용한다. \\
+	예: A{\tt <}31..4{\tt >}* = 12345,
+	TT{\tt <}3..0{\tt >}* = 4, AS{\tt <}3..0{\tt >}* = 0x5
+  \item 신호의 상태를 나타낼때 논리적인 값을 사용하는 것을 기본(default)으로 한다. 
+	단, 신호의 시간적인 규격을 기술할 때는 전압 레벨을 사용한다(신호의 이름에 
+	*의 유무 확인요).
+\end{itemize}
+%
+
+\subsubsection{시간 규격 표시에 대한 규칙}
+\begin{itemize}
+  \item 시간 규격은 {\it n\/}sec ($10^{-9}$ 초)를 기본 단위로 한다.
+	단, 예외의 경우는 별도로 시간 단위를 표시한다.
+  \item 시간 규격에서 사용하는 신호의 타이밍도는 실제 버스에 나타나는 신호를 기준으로 
+	설명함을 원칙으로 하고,
+	다만 설명의 편의를 위해 구동소자에 관련된 동작을 부가적으로 표시한다.
+\end{itemize}
+%
+
+\subsubsection{신호의 값을 지정하는 일반적인 규칙}
+\begin{itemize}
+  \item 신호의 값은 쉽게 구별되도록 지정한다. \\
+	예 : TT{\tt <}4..0{\tt >}* 신호에서 TT{\tt <}4{\tt >}*의 값이
+	``참(1)''이면 블록에 관련됨을 나타낸다.\\
+	예 : TT{\tt <}4..0{\tt >}* 신호에서 TT{\tt <}3{\tt >}*의 값이
+	``참(1)''이면 쓰기에 관련됨을 나타낸다.
+  \item 응답 신호의 경우 버스에서의 신호의 값이 기본적으로 오류인 것으로 지정한다. \\
+	예 : DACK*의 경우 해당 신호의 값을 구동하지 않으면 버스 상에서 전압이 높은 상태로
+	유지되므로 자동으로 오류로 값을 갖게 된다.
+  \item 신호의 값 중 일부가 {\it don't care\/}인 경우 논리 값이 ``0''이 되게 하여
+	버스에서 높은 전압 값을 유지하도록 한다.
+\end{itemize}
+%%%%%
